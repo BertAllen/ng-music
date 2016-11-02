@@ -1,8 +1,12 @@
 <div class="album-details">
 	<div class="jumbotron">
 		<h1>YOUR ALBUM SHOULD SHOW UP HERE</h1>
-		<ul>
-			<li>You may want to show all of the tracks in a paticular ALBUM here</li>
+		<ul ng-repeat="track in ac.album.tracks">
+			<li ng-if="track.wrapperType=='track'">{{track.trackName}}</li>
+			<!--<li>{{track.artistViewUrl}}</li>
+			<li>{{track.trackViewUrl}}</li>-->
+
 		</ul>
+		<button ng-click="ac.goback()">Back to Albums</button>
 	<div>
 </div>
